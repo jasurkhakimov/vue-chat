@@ -1,0 +1,117 @@
+.main_container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main_left {
+    position: relative;
+    // background-color: #eee;
+    max-height: 100vh;
+    z-index: 2;
+
+    /* overflow-y: scroll; */
+}
+
+.contact_link {
+    border-bottom: 1px solid #eee;
+}
+
+.logo_block {
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+}
+
+.logo_block .img {
+    height: 40px;
+}
+
+.contacts_block {
+    overflow: auto;
+    max-height: calc(100vh - 65px);
+}
+
+.main_right {
+    position: relative;
+    background-color: #5fd4f2;
+    background-image: url("./bg_gradient_4.jpg");
+    background-size: cover;
+}
+
+.input_block {
+    display: flex;
+    align-items: center;
+    padding: 8px 64px;
+    padding-bottom: 12px;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+}
+
+.input_block .field {
+    width: 200px;
+}
+
+.chat_messages {
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px - 58px);
+    padding: 18px 65px;
+    padding-bottom: 0;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.chat_messages .one_message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+    &:nth-last-child(-n + 1) {
+        margin-bottom: 0px;
+    }
+}
+
+.chat_messages .one_message.to {
+    justify-content: end;
+    flex-direction: row-reverse;
+}
+
+.one_message .text {
+    background-color: #fff;
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    margin-left: 8px;
+    overflow-x: scroll;
+}
+
+.one_message.to .text {
+    background: #e0f7fa;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.one_message .time {
+    align-self: self-end;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    margin: 0px 4px;
+}
+
+.one_message .accept {
+    align-self: self-end;
+    margin-right: 2px;
+
+    & * {
+        color: #fff;
+    }
+}

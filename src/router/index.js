@@ -6,13 +6,20 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: {name: 'chats'},
     component: () => import('../components/layouts/BaseLayout.vue'),
     children: [
       {
-        path: '',
-        name: 'home',
+        path: '/chats',
+        name: 'chats',
         component: () => import('../views/Home')
-      }
+      },
+      {
+        path: '/chats/:id',
+        name: 'chat-id',
+        component: () => import('../views/Chat.vue')
+      },
+
     ]
   },
   {
